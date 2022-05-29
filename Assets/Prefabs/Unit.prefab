@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 444258183244566479}
   - component: {fileID: 8545651881564573594}
   - component: {fileID: 7736946651194960920}
+  - component: {fileID: 272995197087847507}
+  - component: {fileID: 6381595336762800994}
   m_Layer: 0
   m_Name: Unit
   m_TagString: Untagged
@@ -85,6 +87,7 @@ MonoBehaviour:
     jumpstartSpeed: 6
   _transform: {fileID: 5751285742893563947}
   _rigidbody: {fileID: 444258183244566479}
+  groundedTolerance: 1.15
 --- !u!54 &444258183244566479
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -112,7 +115,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2.1
+  m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &7736946651194960920
@@ -126,9 +129,34 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.51
-  m_Height: 2
+  m_Height: 1.98
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &272995197087847507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2306881077057735610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 759ffe8da00746948b8d6c25bd49c262, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6381595336762800994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2306881077057735610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 350816d6ef207b348bb71d4ca60f1394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  combatAnimator: {fileID: 272995197087847507}
 --- !u!1 &2395017241413506747
 GameObject:
   m_ObjectHideFlags: 0

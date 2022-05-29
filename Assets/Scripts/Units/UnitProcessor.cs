@@ -19,10 +19,10 @@ public class UnitProcessor : MonoBehaviour
         if (selectedUnit == null)
             return GetRandomUnit();
 
-        Debug.Log("pre " + selectedUnitIndex + " / " + unitsList.Count);
+        //Debug.Log("pre " + selectedUnitIndex + " / " + unitsList.Count);
         if (selectedUnitIndex + 1 >= unitsList.Count)        
             selectedUnitIndex = -1;
-        Debug.Log("post " + selectedUnitIndex + " / " + unitsList.Count);
+        //Debug.Log("post " + selectedUnitIndex + " / " + unitsList.Count);
         Unit unit = unitsList[++selectedUnitIndex];
         selectedUnit = unit;
 

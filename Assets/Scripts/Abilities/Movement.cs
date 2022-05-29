@@ -46,7 +46,8 @@ public class Movement : MonoBehaviour
             SetVelocity(WorldDirectionToCameraDirection(input));
     }
 
-    private float groundedTolerance = 0.05f;
+    [SerializeField] private float groundedTolerance = 1.15f;
+
     public bool IsGrounded()
     {
         return Physics.Raycast(transform.position, Vector3.down, groundedTolerance);
@@ -94,5 +95,6 @@ public class Movement : MonoBehaviour
 
         speed = _rigidbody.velocity.magnitude;
         direction = _rigidbody.velocity.normalized;
+        //isGrounded = IsGrounded();
     }
 }

@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class PlayerUnitSetter : MonoBehaviour
 {
-    [SerializeField] PlayerUnit player;
+    [SerializeField] List<PlayerUnit> players;
     [SerializeField] UnitProcessor units;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
-            player.ControlledUnit = units.GetNextUnit();
+            foreach (var player in players)
+            {
+                player.ControlledUnit = units.GetNextUnit();
+            }
+
 
         if (Input.GetKeyDown(KeyCode.R))
-            player.ControlledUnit = units.GetRandomUnit();
-
-
+            foreach (var player in players)
+            {
+                player.ControlledUnit = units.GetRandomUnit();
+            }
     }
 }

@@ -7,8 +7,6 @@ public class PlayerWasdUnit : PlayerUnit
 {
     [SerializeField] CameraRig followingCamera;
 
-
-
     private void Awake()
     {
         if (followingCamera == null)
@@ -19,6 +17,9 @@ public class PlayerWasdUnit : PlayerUnit
 
     private void UpdateCameraTarget(Unit unit) 
     {
+        if (unit == null)
+            return;
+
         followingCamera.focusPoint = unit.transform;
         followingCamera.focusMoved = true;
     }
@@ -54,12 +55,12 @@ public class PlayerWasdUnit : PlayerUnit
         inputDirection += Convert.ToByte(Input.GetKey(KeyCode.A)) * - Vector3.right;
         inputDirection += Convert.ToByte(Input.GetKey(KeyCode.S)) * - Vector3.forward;
         inputDirection += Convert.ToByte(Input.GetKey(KeyCode.D)) * Vector3.right;
+        _processedInput.direction = inputDirection.normalized;
         inputDirection += Convert.ToByte(Input.GetKeyDown(KeyCode.Space)) * Vector3.up;
+
         var sprint = Input.GetKey(KeyCode.LeftShift);
-
-
-        _processedInput.direction = inputDirection;
         _processedInput.isSprinting = sprint;
+
         _processedInput.cameraBasis = null;
     }
 }
