@@ -15,6 +15,7 @@ public class AnimatedObject : MonoBehaviour
         animationMag.animatedObject = transform;
         animationMag.nodes = new List<AnimationNode>();
     }
+    
 
     //[ContextMenu("DEBUG set animationMag object to self")]
     //public void SetupAnimationMag()
