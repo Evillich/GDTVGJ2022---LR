@@ -23,6 +23,7 @@ public class MeleeAttack : MonoBehaviour
             return;
 
         // we dont support multiorder yet
+        Debug.Log($"Ordered attack id = {(int)orderedAttacks[0]}");
         combatAnimator.RunAnimationById((int)orderedAttacks[0]);
         OnAttack?.Invoke();
     }

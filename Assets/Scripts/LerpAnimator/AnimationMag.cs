@@ -8,8 +8,9 @@ public class AnimationMag
     public Transform animatedObject;
     public List<AnimationNode> nodes;
     public float duration = 1f;
+    public float durationScale;
 
-    private float durationScale;
+    public float nodesDurationScale;
 
     [SerializeField] private float nodeSize = 1f;
 
@@ -29,9 +30,10 @@ public class AnimationMag
 
         foreach (var node in nodes)
         {
-            durationScale += node.size;
+            nodesDurationScale += node.size;
         }
 
-        durationScale = duration / durationScale;
+        nodesDurationScale = duration / nodesDurationScale;
+        durationScale = 1f / duration;
     }
 }

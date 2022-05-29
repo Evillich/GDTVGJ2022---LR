@@ -145,6 +145,116 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 759ffe8da00746948b8d6c25bd49c262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectForAnimation: {fileID: 998511260135585118}
+  animationMags:
+  - animatedObject: {fileID: 998511260135585119}
+    nodes: []
+    duration: 1
+    durationScale: 0
+    nodesDurationScale: 0
+    nodeSize: 1
+  - animatedObject: {fileID: 998511260135585119}
+    nodes:
+    - position: {x: 0, y: 0.25, z: 0.034}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      size: 1
+    - position: {x: 0, y: 0.25, z: 0.034}
+      rotation: {x: -0, y: 0.6427876, z: -0, w: 0.7660445}
+      size: 1
+    - position: {x: 0, y: 0.25, z: 0.034}
+      rotation: {x: -0, y: 0.42261827, z: -0, w: 0.9063079}
+      size: 1
+    - position: {x: 0, y: 0.25, z: 0.034}
+      rotation: {x: -0, y: -0.17364825, z: -0, w: 0.9848078}
+      size: 1
+    - position: {x: 0, y: 0.25, z: 0.034}
+      rotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+      size: 1
+    - position: {x: 0, y: 0.25, z: 0.034}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      size: 1
+    duration: 2
+    durationScale: 0
+    nodesDurationScale: 0
+    nodeSize: 1
+  - animatedObject: {fileID: 998511260135585119}
+    nodes:
+    - position: {x: 0, y: 0.25, z: 0.034}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      size: 1
+    - position: {x: 0, y: 0.25, z: 0.034}
+      rotation: {x: -0, y: -0.6427876, z: -0, w: 0.7660445}
+      size: 1
+    - position: {x: 0, y: 0.25, z: 0.034}
+      rotation: {x: -0, y: -0.42261827, z: -0, w: 0.9063079}
+      size: 1
+    - position: {x: 0, y: 0.25, z: 0.034}
+      rotation: {x: -0, y: 0.42261827, z: -0, w: 0.9063079}
+      size: 1
+    - position: {x: 0, y: 0.25, z: 0.034}
+      rotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+      size: 1
+    - position: {x: 0, y: 0.25, z: 0.034}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      size: 1
+    duration: 2
+    durationScale: 0
+    nodesDurationScale: 0
+    nodeSize: 1
+  - animatedObject: {fileID: 998511260135585119}
+    nodes:
+    - position: {x: 0, y: 0.25, z: 0.034}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      size: 1
+    - position: {x: 1.12, y: 0.25, z: 0.034}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      size: 1
+    - position: {x: 0, y: 0.25, z: 0.034}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      size: 1
+    duration: 1
+    durationScale: 0
+    nodesDurationScale: 0
+    nodeSize: 1
+  - animatedObject: {fileID: 998511260135585119}
+    nodes:
+    - position: {x: 0, y: 0.25, z: 0.034}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      size: 1
+    - position: {x: 0, y: 0.25, z: 0.034}
+      rotation: {x: -0, y: 0.4509955, z: -0, w: 0.8925262}
+      size: 1
+    - position: {x: 0, y: 0.25, z: 0.034}
+      rotation: {x: -0, y: 0.85118246, z: -0, w: 0.52487}
+      size: 1
+    - position: {x: 0, y: 0.25, z: 0.034}
+      rotation: {x: -0, y: 0.998291, z: -0, w: 0.058438275}
+      size: 1
+    - position: {x: 0, y: 0.25, z: 0.034}
+      rotation: {x: -0, y: 0.8993692, z: -0, w: -0.43719003}
+      size: 1
+    - position: {x: 0, y: 0.25, z: 0.034}
+      rotation: {x: -0, y: 0.6868789, z: -0, w: -0.7267719}
+      size: 1
+    - position: {x: 0, y: 0.25, z: 0.034}
+      rotation: {x: -0, y: 0.3438617, z: -0, w: -0.9390204}
+      size: 1
+    - position: {x: 0, y: 0.25, z: 0.034}
+      rotation: {x: 0, y: -0, z: -0, w: -1}
+      size: 1
+    duration: 1
+    durationScale: 0
+    nodesDurationScale: 0
+    nodeSize: 1
+  loadedMag:
+    animatedObject: {fileID: 0}
+    nodes: []
+    duration: 1
+    durationScale: 0
+    nodesDurationScale: 0
+    nodeSize: 1
+  progress: 0
+  inProgress: 0
 --- !u!114 &6381595336762800994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,7 +400,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7046680713702668278, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7046680713702668278, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -302,6 +412,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+--- !u!1 &998511260135585118 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7046680713702668279, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+  m_PrefabInstance: {fileID: 7787210243805282985}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &998511260135585119 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7046680713702668278, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}

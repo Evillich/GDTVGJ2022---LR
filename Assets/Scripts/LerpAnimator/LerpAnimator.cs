@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace LerpAnimator
@@ -8,25 +7,45 @@ namespace LerpAnimator
     public class LerpAnimator : MonoBehaviour
     {
         [Header("Setup")] [SerializeField] private GameObject objectForAnimation;
-        [SerializeField] private AnimatedObject currentAnimatedObject;
         [SerializeField] private List<AnimationMag> animationMags;
+        [SerializeField] private AnimationMag loadedMag;
+        public Action OnAnimationFinish;
+        [SerializeField][Range(0,1f)]
+        private float progress;
+        private float progressScale;
 
-        private Dictionary<AnimationMag, float> progress;
+        [SerializeField] bool inProgress;
 
         private void Awake()
         {
-            progress = new Dictionary<AnimationMag, float>();
+            PreCache();
+        }
+
+        private void PreCache()
+        {
+            foreach (var mag in animationMags)
+            {
+                mag.CashDurationScale();
+            }
         }
 
         public void AddAnimatedObject()
         {
-            currentAnimatedObject = objectForAnimation.AddComponent<AnimatedObject>();
+            var currentAnimatedObject = objectForAnimation.AddComponent<AnimatedObject>();
+            currentAnimatedObject.animationMag = new AnimationMag();
+            currentAnimatedObject.animationMag.nodes = new List<AnimationNode>();
             currentAnimatedObject.animationMag.animatedObject = objectForAnimation.transform;
             animationMags.Add(currentAnimatedObject.animationMag);
         }
         
         public void RunAnimationById(int id)
-        {
+        {            
+            if (inProgress)
+            {
+                Debug.Log("Another animation in progress");
+                return;
+            }
+            //
             if (animationMags.Count == 0)
             {
                 Debug.LogError("Mag list is empty");
@@ -38,44 +57,80 @@ namespace LerpAnimator
                 Debug.LogError("Mag with this id does not exist");
                 return;
             }
-            
-            if(animationMags.Count <2 ) return;
-            var currentMag = animationMags[id];
-            progress.Add(currentMag, 0f);
-        }
 
-        private void SetProcessAnimation(float value)
-        {
-            
+            progress = 0f;
+            inProgress = true;
+            loadedMag = animationMags[id];
+            progressScale = loadedMag.durationScale;
         }
 
         private void Update()
         {
-            ProcessAnimation();
+            ProcessAnimation();            
         }
 
         private void ProcessAnimation()
         {
-            if(progress.Count==0) return;
-            foreach (var p in progress)
+            if (!inProgress)
+                return;
+            progress += Time.deltaTime * progressScale;
+            if (progress >= 1f)
             {
-                var animatedObject = p.Key.animatedObject;
-                var actionMag = p.Key;
-                
-                //animatedObject.position = Vector3.Lerp(animatedObject.position, m_WagonPosition[numberSegment].position, localProgress);
-                //animatedObject.rotation = Quaternion.Slerp(m_WagonPosition[numberSegment - 1].rotation, m_WagonPosition[numberSegment].rotation, localProgress);
+                progress = 1f;
+                inProgress = false;
             }
-            
+
+            var animatedObject = loadedMag.animatedObject;
+            MagProgress magProgress = GetLocalProgress(loadedMag, progress);
+            Debug.Log($"loadedMag = {loadedMag}; progress = {progress}; nodeIndex = {magProgress.nodeIndex}; nodeProgress = {magProgress.nodeProgress}; loadedMag.nodes.Count = {loadedMag.nodes.Count} ");
+
+
+
+            animatedObject.localPosition = Vector3.Lerp(loadedMag.nodes[magProgress.nodeIndex].position, loadedMag.nodes[magProgress.nodeIndex + 1].position, magProgress.nodeProgress);
+            animatedObject.localRotation = Quaternion.Slerp(loadedMag.nodes[magProgress.nodeIndex].rotation, loadedMag.nodes[magProgress.nodeIndex + 1].rotation, magProgress.nodeProgress);
+
+            if (inProgress)
+                return;
+            loadedMag = null;
+            OnAnimationFinish?.Invoke();
         }
 
-        private int GetNodeId()
+        
+        struct MagProgress
         {
-            return 0;
+            public int nodeIndex;
+            public float nodeProgress;
+
+            public MagProgress(int index, float progress)
+            {
+                nodeIndex = index;
+                nodeProgress = progress;                
+            }
         }
         
-        private float GetLocalProgress(float globalProgress, AnimationMag actionMag, int nodeId)
+        private MagProgress GetLocalProgress(AnimationMag actionMag, float globalProgress)
         {
-            return 0f;
+            int index = 0;
+            float progress = 0f;
+
+
+            float nextProgress = 0f;
+            float lastProgress = 0f;
+            float nodeScaledSize = 0f;
+            foreach (var node in actionMag.nodes)
+            {
+                nodeScaledSize = node.size * actionMag.nodesDurationScale;
+                nextProgress += nodeScaledSize;
+                if (nextProgress >= globalProgress)
+                    break;
+
+                lastProgress = nextProgress;
+                index += 1;
+            }
+
+            progress = (globalProgress - lastProgress) / nodeScaledSize;
+
+            return new MagProgress(index, progress);
         }
     }
 }
