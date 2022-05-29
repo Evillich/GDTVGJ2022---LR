@@ -11,34 +11,45 @@ public class AnimatedObjectEditor : Editor
         DrawDefaultInspector();
 
         AnimatedObject animated = (AnimatedObject)target;
-        if (GUILayout.Button("Record new Node"))
+
+        EditorGUILayout.BeginHorizontal();
+        GUILayout.FlexibleSpace();
+
+        if (GUILayout.Button("Relaod Current Node", GUILayout.Width(150)))
         {
-            animated.AddAnimationNode();
+            animated.ReloadCurrentNode();
         }
 
-        if (GUILayout.Button("Next Node"))
-        {
-            animated.NextNode();
-        }
-
-        if (GUILayout.Button("Previous Node"))
+        if (GUILayout.Button("Previous Node", GUILayout.Width(150)))
         {
             animated.PreviousNode();
         }
 
-        if (GUILayout.Button("Change Current Node"))
+        if (GUILayout.Button("Next Node", GUILayout.Width(150)))
+        {
+            animated.NextNode();
+        }
+
+        EditorGUILayout.EndHorizontal();
+
+        EditorGUILayout.BeginHorizontal();
+        GUILayout.FlexibleSpace();
+
+        if (GUILayout.Button("Record new Node", GUILayout.Width(150)))
+        {
+            animated.AddAnimationNode();
+        }
+
+        if (GUILayout.Button("Change Current Node", GUILayout.Width(150)))
         {
             animated.ChangeCurrentNode();
         }
 
-        if (GUILayout.Button("Remove Current Node"))
+        if (GUILayout.Button("Remove Current Node", GUILayout.Width(150)))
         {
             animated.RemoveCurrentNode();
         }
 
-        if (GUILayout.Button("Relaod Current Node"))
-        {
-            animated.ReloadCurrentNode();
-        }
+        EditorGUILayout.EndHorizontal();
     }
 }
