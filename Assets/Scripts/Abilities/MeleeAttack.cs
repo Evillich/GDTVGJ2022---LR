@@ -14,7 +14,7 @@ public class MeleeAttack : MonoBehaviour
         ForwardSwing = 3,
         BackwardSwing = 4
     }
-
+    public Action OnAttack;
     public LerpAnimator.LerpAnimator combatAnimator;
 
     internal void RequestAnimations(List<AttackTypes> orderedAttacks)
@@ -24,5 +24,6 @@ public class MeleeAttack : MonoBehaviour
 
         // we dont support multiorder yet
         combatAnimator.RunAnimationById((int)orderedAttacks[0]);
+        OnAttack?.Invoke();
     }
 }

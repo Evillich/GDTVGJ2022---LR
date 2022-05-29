@@ -6,6 +6,8 @@ public class PlayerMeleeAttack : PlayerUnit
 { 
     List<MeleeAttack.AttackTypes> orderedAttacks = new List<MeleeAttack.AttackTypes>();
 
+
+
     void Update()
     {
         ProcessAttackInput();
@@ -15,10 +17,10 @@ public class PlayerMeleeAttack : PlayerUnit
     private void ProcessAttackInput()
     {
         orderedAttacks.Clear();
-        if (Input.GetKey(KeyCode.LeftArrow)) orderedAttacks.Add(MeleeAttack.AttackTypes.LeftSwing);
-        if (Input.GetKey(KeyCode.RightArrow)) orderedAttacks.Add(MeleeAttack.AttackTypes.RightSwing);
-        if (Input.GetKey(KeyCode.UpArrow)) orderedAttacks.Add(MeleeAttack.AttackTypes.ForwardSwing);
-        if (Input.GetKey(KeyCode.DownArrow)) orderedAttacks.Add(MeleeAttack.AttackTypes.BackwardSwing);
+        if (Input.GetKeyDown(KeyCode.LeftArrow)) orderedAttacks.Add(MeleeAttack.AttackTypes.LeftSwing);
+        if (Input.GetKeyDown(KeyCode.RightArrow)) orderedAttacks.Add(MeleeAttack.AttackTypes.RightSwing);
+        if (Input.GetKeyDown(KeyCode.UpArrow)) orderedAttacks.Add(MeleeAttack.AttackTypes.ForwardSwing);
+        if (Input.GetKeyDown(KeyCode.DownArrow)) orderedAttacks.Add(MeleeAttack.AttackTypes.BackwardSwing);
     }
 
     private void OrderAttacks()
@@ -28,5 +30,6 @@ public class PlayerMeleeAttack : PlayerUnit
 
         var attack = controlledUnit.GetComponent<MeleeAttack>();
         attack.RequestAnimations(orderedAttacks);
+
     }
 }
