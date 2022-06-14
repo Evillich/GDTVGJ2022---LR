@@ -152,7 +152,6 @@ MonoBehaviour:
     duration: 1
     durationScale: 0
     nodesDurationScale: 0
-    nodeSize: 1
   - animatedObject: {fileID: 998511260135585119}
     nodes:
     - position: {x: 0, y: 0.25, z: 0.034}
@@ -173,10 +172,9 @@ MonoBehaviour:
     - position: {x: 0, y: 0.25, z: 0.034}
       rotation: {x: -0, y: -0, z: -0, w: 1}
       size: 1
-    duration: 2
+    duration: 1
     durationScale: 0
     nodesDurationScale: 0
-    nodeSize: 1
   - animatedObject: {fileID: 998511260135585119}
     nodes:
     - position: {x: 0, y: 0.25, z: 0.034}
@@ -197,10 +195,9 @@ MonoBehaviour:
     - position: {x: 0, y: 0.25, z: 0.034}
       rotation: {x: -0, y: -0, z: -0, w: 1}
       size: 1
-    duration: 2
+    duration: 1
     durationScale: 0
     nodesDurationScale: 0
-    nodeSize: 1
   - animatedObject: {fileID: 998511260135585119}
     nodes:
     - position: {x: 0, y: 0.25, z: 0.034}
@@ -215,7 +212,6 @@ MonoBehaviour:
     duration: 1
     durationScale: 0
     nodesDurationScale: 0
-    nodeSize: 1
   - animatedObject: {fileID: 998511260135585119}
     nodes:
     - position: {x: 0, y: 0.25, z: 0.034}
@@ -245,14 +241,12 @@ MonoBehaviour:
     duration: 1
     durationScale: 0
     nodesDurationScale: 0
-    nodeSize: 1
   loadedMag:
     animatedObject: {fileID: 0}
     nodes: []
     duration: 1
     durationScale: 0
     nodesDurationScale: 0
-    nodeSize: 1
   progress: 0
   inProgress: 0
 --- !u!114 &6381595336762800994
@@ -358,10 +352,166 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5751285742893563947}
     m_Modifications:
+    - target: {fileID: 3115553391680043760, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: index
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115553391680043760, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115553391680043760, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[1].size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115553391680043760, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[0].rotation.w
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115553391680043760, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[1].rotation.w
+      value: 0.8652196
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115553391680043760, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[1].rotation.x
+      value: 0.13418764
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115553391680043760, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[1].rotation.y
+      value: 0.35838568
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115553391680043760, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[1].rotation.z
+      value: 0.32395762
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115553391680043760, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[2].rotation.w
+      value: 0.5070173
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115553391680043760, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[2].rotation.y
+      value: 0.8619359
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115553391680043760, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[3].rotation.w
+      value: -0.0867933
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115553391680043760, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[3].rotation.x
+      value: -0.18386468
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115553391680043760, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[3].rotation.y
+      value: 0.97897655
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115553391680043760, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[3].rotation.z
+      value: 0.01630092
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115553391680043760, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[4].rotation.w
+      value: -0.5346073
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115553391680043760, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[4].rotation.x
+      value: 0.020894494
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115553391680043760, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[4].rotation.y
+      value: 0.8192913
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115553391680043760, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[4].rotation.z
+      value: -0.20620437
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115553391680043760, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[5].rotation.w
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115553391680043760, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[5].rotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3115553391680043760, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[5].rotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3283999211191121751, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: index
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3849351894886441973, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
       propertyPath: meleeAttack
       value: 
       objectReference: {fileID: 6381595336762800994}
+    - target: {fileID: 4447909450299363356, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: index
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4447909450299363356, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.duration
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6507470025309231484, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: index
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6507470025309231484, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6507470025309231484, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6507470025309231484, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[1].rotation.w
+      value: 0.94166064
+      objectReference: {fileID: 0}
+    - target: {fileID: 6507470025309231484, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[1].rotation.x
+      value: -0.047662675
+      objectReference: {fileID: 0}
+    - target: {fileID: 6507470025309231484, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[1].rotation.y
+      value: -0.29690439
+      objectReference: {fileID: 0}
+    - target: {fileID: 6507470025309231484, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[1].rotation.z
+      value: 0.15116672
+      objectReference: {fileID: 0}
+    - target: {fileID: 6507470025309231484, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[2].rotation.w
+      value: 0.6953672
+      objectReference: {fileID: 0}
+    - target: {fileID: 6507470025309231484, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[2].rotation.x
+      value: -0.12831387
+      objectReference: {fileID: 0}
+    - target: {fileID: 6507470025309231484, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[2].rotation.y
+      value: -0.6953672
+      objectReference: {fileID: 0}
+    - target: {fileID: 6507470025309231484, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[2].rotation.z
+      value: 0.12831387
+      objectReference: {fileID: 0}
+    - target: {fileID: 6507470025309231484, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[3].rotation.w
+      value: 0.8191521
+      objectReference: {fileID: 0}
+    - target: {fileID: 6507470025309231484, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[3].rotation.y
+      value: 0.5735764
+      objectReference: {fileID: 0}
+    - target: {fileID: 6507470025309231484, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[4].rotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6507470025309231484, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
+      propertyPath: animationMag.nodes.Array.data[4].rotation.y
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 7046680713702668278, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -380,7 +530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7046680713702668278, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7046680713702668278, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
       propertyPath: m_LocalRotation.x
@@ -392,7 +542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7046680713702668278, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7046680713702668278, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -400,7 +550,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7046680713702668278, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 360
       objectReference: {fileID: 0}
     - target: {fileID: 7046680713702668278, guid: 7604261dbbd8a7c479a17ddffce4f82d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z

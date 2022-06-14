@@ -23,11 +23,11 @@ public class UnitProcessor : MonoBehaviour
         if (selectedUnitIndex + 1 >= unitsList.Count)        
             selectedUnitIndex = -1;
         //Debug.Log("post " + selectedUnitIndex + " / " + unitsList.Count);
-        Unit unit = unitsList[++selectedUnitIndex];
-        selectedUnit = unit;
+        selectedUnit = unitsList[++selectedUnitIndex];
 
-        return unit;
+        return selectedUnit;
     }
+
     public Unit GetRandomUnit() 
     {
         if (unitsList.Count == 0)

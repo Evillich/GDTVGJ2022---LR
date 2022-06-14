@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class AnimatedObject : MonoBehaviour
 {
-    // This class is purely QoL feature and not required for animation, only for comfortable animation setting
+    // This class is purely QoL feature and not required for animation, only for comfortable animation setting and ability to edit existing animations
     public float nodeSize = 1f;
     public AnimationMag animationMag;
+    [SerializeField] int index;
+
 
     [ContextMenu("DEBUG create animationMag")]
     public void CreateAnimationMag()
@@ -30,7 +32,6 @@ public class AnimatedObject : MonoBehaviour
         index = animationMag.nodes.Count - 1;
     }
 
-    [SerializeField] int index;
 
     [ContextMenu("Next Node")]
     public void NextNode()

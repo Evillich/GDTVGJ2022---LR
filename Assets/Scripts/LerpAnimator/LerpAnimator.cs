@@ -23,9 +23,9 @@ namespace LerpAnimator
 
         private void PreCache()
         {
-            foreach (var mag in animationMags)
+            for (var i = 0; i < animationMags.Count; i++)
             {
-                mag.CashDurationScale();
+                animationMags[i].CashDurationScale();
             }
         }
 
@@ -116,11 +116,11 @@ namespace LerpAnimator
 
             float nextProgress = 0f;
             float lastProgress = 0f;
-            float nodeScaledSize = 0f;
+            float nodeNormalisedSize = 0f;
             foreach (var node in actionMag.nodes)
             {
-                nodeScaledSize = node.size * actionMag.nodesDurationScale;
-                nextProgress += nodeScaledSize;
+                nodeNormalisedSize = node.size * actionMag.nodesDurationScale;
+                nextProgress += nodeNormalisedSize;
                 if (nextProgress >= globalProgress)
                     break;
 
@@ -128,7 +128,7 @@ namespace LerpAnimator
                 index += 1;
             }
 
-            progress = (globalProgress - lastProgress) / nodeScaledSize;
+            progress = (globalProgress - lastProgress) / nodeNormalisedSize;
 
             return new MagProgress(index, progress);
         }

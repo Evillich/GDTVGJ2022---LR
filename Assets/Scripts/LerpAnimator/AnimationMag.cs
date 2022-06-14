@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class AnimationMag
+public class AnimationMag : ScriptableObject
 {
     public Transform animatedObject;
     public List<AnimationNode> nodes;
-    public float duration = 1f;
+    public float duration;
     public float durationScale;
 
     public float nodesDurationScale;
 
-    [SerializeField] private float nodeSize = 1f;
+    private float nodeSize = 1f;
 
     public void RecordNewNode()
     {

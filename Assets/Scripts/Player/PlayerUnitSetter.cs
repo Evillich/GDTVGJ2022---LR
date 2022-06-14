@@ -10,10 +10,15 @@ public class PlayerUnitSetter : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            var unit = units.GetNextUnit();
             foreach (var player in players)
             {
-                player.ControlledUnit = units.GetNextUnit();
+                player.ControlledUnit = unit;
             }
+        }
+
+
 
 
         if (Input.GetKeyDown(KeyCode.R))
